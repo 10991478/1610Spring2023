@@ -1,9 +1,17 @@
 using System;
 
-public class Main
+public class Program
 {
-  public static void main(string[] args)
-  {
-    Console.WriteLine("Poopy");    
-  }
+
+    public static void Main(string[] args)
+    {	
+		int x = 4;
+		string str = "Poopy";
+        Console.WriteLine(x + " " + str);
+		x++;
+		Console.WriteLine(x);
+		int y = 2;
+		Console.WriteLine(x + y);
+		Console.WriteLine(x%y);
+    }
 }
