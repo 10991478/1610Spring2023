@@ -4,9 +4,9 @@ public class Program
 {
 	public Operations myOperator;
 	
-	public void Main()
+	public static void Main()
 	{
-		myOperator = new Operations();
+		Operations myOperator = new Operations();
 		
 		Console.WriteLine("Welcome");
 		myOperator.DoMath(10, 4);
@@ -36,6 +36,12 @@ public class Operations {
 			if (value/value2 == 2) {
 				Console.WriteLine("The first is twice a big");
 			}
+			else if (value/value2 == 3) {
+				Console.WriteLine("The first is three times as big");
+			}
+			else {
+				Console.WriteLine("There's nothing cool about the relationship between those numbers");
+			}
 		} else {
 			Console.WriteLine("False, the second is greater.");
 		}
@@ -50,7 +56,7 @@ public class Operations {
 	}
 	
 	public void CheckOneThruTen(int num){
-		switch num{
+		switch (num){
 			case 1:
 				Console.WriteLine("That is a number 1 - 10. It is " + num + ".");
 				break;
