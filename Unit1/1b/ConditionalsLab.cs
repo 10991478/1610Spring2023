@@ -25,9 +25,17 @@ public class Operations {
 		Console.WriteLine(number);
 	}
 	
+	public void DoMath (int value, int value2, int value3){
+		var number = value + value2 + value3;
+		Console.WriteLine(number);
+	}
+	
 	public void Compare (int value, int value2) {
 		if(value > value2) {
 			Console.WriteLine("True, the first greater.");
+			if (value/value2 == 2) {
+				Console.WriteLine("The first is twice a big");
+			}
 		} else {
 			Console.WriteLine("False, the second is greater.");
 		}
@@ -38,6 +46,44 @@ public class Operations {
 			Console.WriteLine("Correct Password");
 		} else {
 			Console.WriteLine("Incorrect Password");	
+		}
+	}
+	
+	public void CheckOneThruTen(int num){
+		switch num{
+			case 1:
+				Console.WriteLine("That is a number 1 - 10. It is " + num + ".");
+				break;
+			case 2:
+				Console.WriteLine("That is a number 1 - 10. It is " + num + ".");
+				break;
+			case 3:
+				Console.WriteLine("That is a number 1 - 10. It is " + num + ".");
+				break;
+			case 4:
+				Console.WriteLine("That is a number 1 - 10. It is " + num + ".");
+				break;	
+			case 5:
+				Console.WriteLine("That is a number 1 - 10. It is " + num + ".");
+				break;	
+			case 6:
+				Console.WriteLine("That is a number 1 - 10. It is " + num + ".");
+				break;
+			case 7:
+				Console.WriteLine("That is a number 1 - 10. It is " + num + ".");
+				break;
+			case 8:
+				Console.WriteLine("That is a number 1 - 10. It is " + num + ".");
+				break;
+			case 9:
+				Console.WriteLine("That is a number 1 - 10. It is " + num + ".");
+				break;
+			case 10:
+				Console.WriteLine("That is a number 1 - 10. It is " + num + ".");
+				break;
+			default:
+				Console.WriteLine("That is not a number 1 - 10 (inclusive)");
+				break;
 		}
 	}
 }
