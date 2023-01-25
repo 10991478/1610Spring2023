@@ -1,17 +1,17 @@
-using System
+using System;
 					
 public class Program
 {
-	public void Main(
+	public static void Main(string[] args)
 	{
-		Console.WriteLine"Welcome);
+		Console.WriteLine("Welcome");
 		DoMath(10, 4);
-		DoMath(20, 7)
+		DoMath(20, 7);
 		DoMath(30, 15);
+	}
 	
-	
-	public void DoMath (int value, int value2) {
-		var number = value + valu;
-		Console.WriteLine(number)
+	public static void DoMath(int value, int value2) {
+		var number = value + value2;
+		Console.WriteLine(number);
 	}
 }
