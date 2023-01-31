@@ -4,9 +4,9 @@ public class Program{
     public static void Main(string[] args){
         string[] myStuff = {"keys","wallet","car","dog","cat","mortgage","divorce papers","lawyer"};
         Console.WriteLine("Here's all the stuff I currently have: ");
-        foreach (string item in myStuff){
-            Console.Write(item);
-            if (item != myStuff[myStuff.Length - 1]){
+        for (int i = 0; i < myStuff.Length; i++){
+            Console.Write(myStuff[i]);
+            if (i != myStuff.Length - 1){
                 Console.Write(", ");
             }
             else {
