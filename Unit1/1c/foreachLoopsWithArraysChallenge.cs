@@ -57,47 +57,39 @@ public class Convert{
         Convert converted = new Convert(true, 0);
         while (valid){
             char character = str[i];
+            converted.intValue *= 10;
             switch (character){
                 case '0':
-                    converted.intValue *= 10;
                     break;
                 case '1':
-                    converted.intValue *= 10;
                     converted.intValue++;
                     break;
                 case '2':
-                    converted.intValue *= 10;
                     converted.intValue += 2;
                     break;
                 case '3':
-                    converted.intValue *= 10;
                     converted.intValue += 3;
                     break;
                 case '4':
-                    converted.intValue *= 10;
                     converted.intValue += 4;
                     break;
                 case '5':
-                    converted.intValue *= 10;
                     converted.intValue += 5;
                     break;
                 case '6':
-                    converted.intValue *= 10;
                     converted.intValue += 6;
                     break;
                 case '7':
-                    converted.intValue *= 10;
                     converted.intValue += 7;
                     break;
                 case '8':
-                    converted.intValue *= 10;
                     converted.intValue += 8;
                     break;
                 case '9':
-                    converted.intValue *= 10;
                     converted.intValue += 9;
                     break;
                 case ' ':
+                    converted.intValue /= 10;
                     break;
                 default:
                     valid = false;
