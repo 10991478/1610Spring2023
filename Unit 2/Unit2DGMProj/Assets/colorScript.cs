@@ -26,7 +26,7 @@ public class colorScript : MonoBehaviour
             GetComponent<Renderer>().material.color = Color.blue;
         }
         if (transform.position.y > 2 && transform.position.y < 3){
-            GetComponent<Renderer>().material.color = Color.yellow
+            GetComponent<Renderer>().material.color = Color.yellow;
             Debug.Log("Passed through yellow zone");
         }
         if (Input.GetKeyDown(KeyCode.Down)){
