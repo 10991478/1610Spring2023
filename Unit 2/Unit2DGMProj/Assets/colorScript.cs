@@ -20,7 +20,7 @@ public class colorScript : MonoBehaviour
             GetComponent<Renderer>().material.color = Color.green;
         }
         if (Input.GetKeyDown(KeyCode.B)){
-            GetComponent<Renderer>().material.color = Color.blue
+            GetComponent<Renderer>().material.color = Color.blue;
         }
     }
 }
