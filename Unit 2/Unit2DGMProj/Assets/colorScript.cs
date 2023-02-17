@@ -29,11 +29,11 @@ public class colorScript : MonoBehaviour
             GetComponent<Renderer>().material.color = Color.yellow;
             Debug.Log("Passed through yellow zone");
         }
-        if (Input.GetKeyDown(KeyCode.Down)){
+        if (Input.GetKeyDown(KeyCode.DownArrow)){
             cubeScore = addToScore(cubeScore, -1);
             Debug.Log("Score: "+cubeScore);
         }
-        if (Input.GetKeyDown(KeyCode.Up)){
+        if (Input.GetKeyDown(KeyCode.UpArrow)){
             cubeScore = addToScore(cubeScore, 1);
             Debug.Log("Score: "+cubeScore);
         }
