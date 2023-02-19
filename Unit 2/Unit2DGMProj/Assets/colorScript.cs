@@ -10,9 +10,9 @@ public class colorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Your score is "+cubeScore);
+        print("Your score is "+cubeScore);
         cubeScore += 5;
-        Debug.Log("Your score increased by 5. Your score is now "+cubeScore);
+        print("Your score increased by 5. Your score is now "+cubeScore);
     }
 
     // Update is called once per frame
@@ -29,15 +29,15 @@ public class colorScript : MonoBehaviour
         }
         if (transform.position.y > 2 && transform.position.y < 3 && GetComponent<Renderer>().material.color != Color.yellow){
             GetComponent<Renderer>().material.color = Color.yellow;
-            Debug.Log("Passed through yellow zone");
+            print("Passed through yellow zone");
         }
         if (Input.GetKeyDown(KeyCode.DownArrow)){
             cubeScore = addToScore(cubeScore, -1);
-            Debug.Log("Score: "+cubeScore);
+            print("Score: "+cubeScore);
         }
         if (Input.GetKeyDown(KeyCode.UpArrow)){
             cubeScore = addToScore(cubeScore, 1);
-            Debug.Log("Score: "+cubeScore);
+            print("Score: "+cubeScore);
         }
     }
 
