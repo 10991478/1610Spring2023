@@ -13,13 +13,8 @@ public class activeInactiveL : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L)){
-            gameObject.SetActive(true);
-            print("true");
-        }
-        if (Input.GetKeyUp(KeyCode.L)){
+        if (transform.position.x < -3 || transform.position.x > 3 || transform.position.z < -3 || transform.position.z > 3){
             gameObject.SetActive(false);
-            print("false");
         }
     }
 }
