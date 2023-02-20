@@ -15,9 +15,11 @@ public class activeInactiveL : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L)){
             gameObject.SetActive(true);
+            print("true");
         }
         if (Input.GetKeyUp(KeyCode.L)){
             gameObject.SetActive(false);
+            print("false");
         }
     }
 }
