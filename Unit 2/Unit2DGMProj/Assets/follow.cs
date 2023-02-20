@@ -12,24 +12,25 @@ public class follow : MonoBehaviour
 
     void Update()
     {
-        float followSpeedX = 0f;
-        float followSpeedY = 0f;
-        float followSpeedZ = 0f;
-        float xDiff = Math.Abs(target.transform.position.x - transform.position.x);
-        float yDiff = Math.Abs(target.transform.position.x - transform.position.x);
-        float zDiff = Math.Abs(target.transform.position.x - transform.position.x);
-        if (xDiff > followDistance){
-            followSpeedX = followSpeed*(xDiff) + minimumSpeed;
+        float followX = 0f;
+        float followY = 0f;
+        float followZ = 0f;
+        float xDist = target.transform.position.x - transform.position.x;
+        float yDist = target.transform.position.y - transform.position.y;
+        float zDist = target.transform.position.z - transform.position.z;
+        if (Math.Abs(xDist) > followDistance){
+            followX = followSpeed*(xDist) + minimumSpeed;
+            print("x too far");
         }
-        if (yDiff > followDistance){
-            followSpeedY = followSpeed*(yDiff) + minimumSpeed;
+        if (Math.Abs(zDist) > followDistance){
+            followZ = followSpeed*(zDist) + minimumSpeed;
+            print("z too far");
         }
-        if (zDiff > followDistance){
-            followSpeedZ = followSpeed*(zDiff) + minimumSpeed;
+        if (Math.Abs(yDist) > followDistance){
+            followY = followSpeed*(yDist) + minimumSpeed;
+            print("y too far");
         }
-        if (xDiff < followDistance/2 || zDiff < followDistance/2){
-            
-        }
-        transform.Translate(new Vector3(followSpeedX,followSpeedY,followSpeedZ) * Time.deltaTime);
+        
+        transform.Translate(new Vector3(followX,followY,followZ) * Time.deltaTime);
     }
 }
