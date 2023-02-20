@@ -15,14 +15,20 @@ public class follow : MonoBehaviour
         float followSpeedX = 0f;
         float followSpeedY = 0f;
         float followSpeedZ = 0f;
-        if (Math.Abs(target.transform.position.x - transform.position.x) > followDistance){
-            followSpeedX = followSpeed*(Math.Abs(target.transform.position.x - transform.position.x)) + minimumSpeed;
+        float xDiff = Math.Abs(target.transform.position.x - transform.position.x);
+        float yDiff = Math.Abs(target.transform.position.x - transform.position.x);
+        float zDiff = Math.Abs(target.transform.position.x - transform.position.x);
+        if (xDiff > followDistance){
+            followSpeedX = followSpeed*(xDiff) + minimumSpeed;
         }
-        if (Math.Abs(target.transform.position.y - transform.position.y) > followDistance){
-            followSpeedY = followSpeed*(Math.Abs(target.transform.position.y - transform.position.y)) + minimumSpeed;
+        if (yDiff > followDistance){
+            followSpeedY = followSpeed*(yDiff) + minimumSpeed;
         }
-        if (Math.Abs(target.transform.position.z - transform.position.z) > followDistance){
-            followSpeedZ = followSpeed*(Math.Abs(target.transform.position.z - transform.position.z)) + minimumSpeed;
+        if (zDiff > followDistance){
+            followSpeedZ = followSpeed*(zDiff) + minimumSpeed;
+        }
+        if (xDiff < followDistance/2 || zDiff < followDistance/2){
+            
         }
         transform.Translate(new Vector3(followSpeedX,followSpeedY,followSpeedZ) * Time.deltaTime);
     }

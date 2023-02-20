@@ -542,7 +542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1617021915}
   followDistance: 3
-  followSpeed: 1
+  followSpeed: 1.5
   minimumSpeed: 0.2
 --- !u!114 &963194230
 MonoBehaviour:
