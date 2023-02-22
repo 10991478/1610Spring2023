@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class moveCam : MonoBehaviour
 {
-    
-
+    public float sensativity;
 
     void Update()
     {
         float movement = Input.GetAxis("Mouse X");
-        if (movement < 0){
-            print("moved mouse left");
-        }
-        if (movement > 0 ){
-            print("moved mouse right");
-        }
+        float xmove = movement * sensativity;
+        movement = Input.GetAxis("Mouse Y");
+        float ymove = movement * sensativity;
+        transform.position = new Vector3(xmove, ymove, 0);
+        
     }
 }
