@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class moveCam : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        float movement = Input.GetAxis("Mouse X");
+        if (movement < 0){
+            print("moved mouse left");
+        }
+        if (movement > 0 ){
+            print("moved mouse right");
+        }
     }
 }
