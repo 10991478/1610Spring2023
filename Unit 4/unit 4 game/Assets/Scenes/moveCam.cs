@@ -16,14 +16,14 @@ public class moveCam : MonoBehaviour
         if (dist > followDistance){
             transform.Translate(Vector3.forward * dist * Time.deltaTime);
         }
-        float movement = Input.GetAxis("Mouse X");
-        float xmove = movement * sensativity;
-        movement = Input.GetAxis("Mouse Y");
-        float ymove = movement * sensativity;
-        if (ymove < 0 || transform.position.y > target.transform.position.y + groundHeight){
+
+        if (Input.GetMouseButton(0)){
+            float movement = Input.GetAxis("Mouse X");
+            float xmove = movement * sensativity;
+            movement = Input.GetAxis("Mouse Y");
+            float ymove = movement * sensativity;
             transform.RotateAround(target.transform.position, Vector3.left, ymove * Time.deltaTime * sensativity);
+            transform.RotateAround(target.transform.position, Vector3.up, xmove * Time.deltaTime * sensativity);
         }
-        //transform.RotateAround(target.transform.position, Vector3.left, ymove * Time.deltaTime * sensativity);
-        transform.RotateAround(target.transform.position, Vector3.up, xmove * Time.deltaTime * sensativity);
     }
 }
