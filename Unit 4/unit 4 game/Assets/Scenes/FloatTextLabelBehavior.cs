@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(Text))]
 
-public class TextLabelBehavior : MonoBehaviour
+public class FloatTextLabelBehavior : MonoBehaviour
 {
     public Text label;
     public floatData dataObj;

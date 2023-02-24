@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 358a4cc086f49d4489fadc8c2627d196, type: 3}
-  m_Name: Gold
+  m_Script: {fileID: 11500000, guid: 8bb026a8f4d5f4c428ed7b108b709dad, type: 3}
+  m_Name: Energy
   m_EditorClassIdentifier: 
   value: 0
