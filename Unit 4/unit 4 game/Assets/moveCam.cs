@@ -19,7 +19,7 @@ public class moveCam : MonoBehaviour
         float xmove = movement * sensativity;
         movement = Input.GetAxis("Mouse Y");
         float ymove = movement * sensativity;
-        transform.RotateAround(target.transform.position, Vector3.right, ymove * Time.deltaTime * sensativity);
+        transform.RotateAround(target.transform.position, Vector3.left, ymove * Time.deltaTime * sensativity);
         transform.RotateAround(target.transform.position, Vector3.up, xmove * Time.deltaTime * sensativity);
     }
 }
