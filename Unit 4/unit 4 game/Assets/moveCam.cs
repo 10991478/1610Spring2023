@@ -6,6 +6,7 @@ public class moveCam : MonoBehaviour
 {
     public float sensativity;
     public float followDistance;
+    public float groundHeight;
     public GameObject target;
 
     void Update()
@@ -19,7 +20,10 @@ public class moveCam : MonoBehaviour
         float xmove = movement * sensativity;
         movement = Input.GetAxis("Mouse Y");
         float ymove = movement * sensativity;
-        transform.RotateAround(target.transform.position, Vector3.left, ymove * Time.deltaTime * sensativity);
+        if (ymove < 0 || transform.position.y > target.transform.position.y + groundHeight){
+            transform.RotateAround(target.transform.position, Vector3.left, ymove * Time.deltaTime * sensativity);
+        }
+        //transform.RotateAround(target.transform.position, Vector3.left, ymove * Time.deltaTime * sensativity);
         transform.RotateAround(target.transform.position, Vector3.up, xmove * Time.deltaTime * sensativity);
     }
 }
