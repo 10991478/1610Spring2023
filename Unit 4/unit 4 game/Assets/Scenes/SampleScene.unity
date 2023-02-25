@@ -331,7 +331,6 @@ GameObject:
   - component: {fileID: 530210041}
   - component: {fileID: 530210040}
   - component: {fileID: 530210042}
-  - component: {fileID: 530210043}
   m_Layer: 5
   m_Name: GoldText
   m_TagString: Untagged
@@ -415,20 +414,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: {fileID: 0}
   dataObj: {fileID: 11400000, guid: b82203ab54b50374d83a0274717d0697, type: 2}
---- !u!114 &530210043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 530210038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11bc36099bdc6c24cb046dd8bee3ea31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  label: {fileID: 0}
-  dataObj: {fileID: 11400000, guid: 250d03597a350314ba9c37f243181ed0, type: 2}
 --- !u!1 &651432649
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,6 +619,7 @@ GameObject:
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
   - component: {fileID: 963194230}
+  - component: {fileID: 963194231}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -714,7 +700,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ae128658bdfbf64e872bab6f177c91e, type: 3}
   m_Name: 
@@ -739,6 +725,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 64
   m_CollisionDetection: 0
+--- !u!114 &963194231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc06fdc65c1cdc49be1a45c359816c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1229760802}
+  camHeight: 10
+  followTarget: 1
 --- !u!1 &969304287
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,7 +923,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7a02abc699749914ca5969beb8d297de, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1037,7 +1038,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 066290d0f58b1a74c9ffbb1695c5f564, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1165,7 +1166,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: aadd5a709a48466c887296bb5b1b8110, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1263,6 +1264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: {fileID: 0}
   dataObj: {fileID: 11400000, guid: 250d03597a350314ba9c37f243181ed0, type: 2}
+  roundToInt: 1
 --- !u!114 &1765366591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1520,6 +1522,8 @@ GameObject:
   - component: {fileID: 2069701786}
   - component: {fileID: 2069701785}
   - component: {fileID: 2069701787}
+  - component: {fileID: 2069701789}
+  - component: {fileID: 2069701790}
   m_Layer: 0
   m_Name: goldBlock
   m_TagString: Untagged
@@ -1560,7 +1564,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 22262639920f43d6be32430e4e58350d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1620,9 +1624,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 530210043}
-        m_TargetAssemblyTypeName: FloatTextLabelBehavior, Assembly-CSharp
+      - m_Target: {fileID: 530210042}
+        m_TargetAssemblyTypeName: IntTextLabelBehavior, Assembly-CSharp
         m_MethodName: UpdateLabel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2069701789}
+        m_TargetAssemblyTypeName: spawnNewTriggerEvent, Assembly-CSharp
+        m_MethodName: spawnNew
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1637,8 +1653,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 250d03597a350314ba9c37f243181ed0, type: 2}
         m_TargetAssemblyTypeName: floatData, Assembly-CSharp
-        m_MethodName: addToValue
-        m_Mode: 4
+        m_MethodName: decay
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1707,3 +1723,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 7.76}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2069701789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069701780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba17b3d2eccb7054baa10af60a3bba0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnNum: 1
+  spawnObj: {fileID: 2069701780}
+  spawnPos: {fileID: 0}
+  randomPos: 1
+  spwanHeight: 10
+  spawnRange: 15
+--- !u!114 &2069701790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069701780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e568a8275a0c64a899a7033d985e0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mineRate: 0.1
+  energy: {fileID: 11400000, guid: 250d03597a350314ba9c37f243181ed0, type: 2}
