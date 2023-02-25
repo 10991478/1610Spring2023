@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358a4cc086f49d4489fadc8c2627d196, type: 3}
   m_Name: Gold
   m_EditorClassIdentifier: 
-  value: 40
+  value: 1260

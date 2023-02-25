@@ -11,13 +11,11 @@ public class floatData : ScriptableObject
     public float minimum;
     public float decayRate;
     public void addToValue(float num){
-        if (value + num > limit){
-            if (!hasLimit){
-                value += num;
-            }
-        }
-        else{
+        if (value != limit){
             value += num;
+            if (value > limit){
+                value = limit;
+            }
         }
     }
 

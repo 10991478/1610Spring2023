@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb026a8f4d5f4c428ed7b108b709dad, type: 3}
   m_Name: Energy
   m_EditorClassIdentifier: 
-  value: 10.000992
+  value: 25.00101
   hasLimit: 1
   hasMinimum: 1
   limit: 100
