@@ -19,6 +19,10 @@ public class floatData : ScriptableObject
         }
     }
 
+    public void setValue(float num){
+        value = num;
+    }
+
     public void decay(){
         if (value - decayRate < minimum){
             if (!hasMinimum){
