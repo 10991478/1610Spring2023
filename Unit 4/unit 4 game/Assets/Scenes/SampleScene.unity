@@ -1564,7 +1564,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 22262639920f43d6be32430e4e58350d, type: 2}
+  - {fileID: 2100000, guid: 1dae259fb6fe3b4449c63804016d3a86, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1627,18 +1627,6 @@ MonoBehaviour:
       - m_Target: {fileID: 530210042}
         m_TargetAssemblyTypeName: IntTextLabelBehavior, Assembly-CSharp
         m_MethodName: UpdateLabel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2069701789}
-        m_TargetAssemblyTypeName: spawnNewTriggerEvent, Assembly-CSharp
-        m_MethodName: spawnNew
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1753,5 +1741,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e568a8275a0c64a899a7033d985e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialHealth: 15
   mineRate: 0.1
   energy: {fileID: 11400000, guid: 250d03597a350314ba9c37f243181ed0, type: 2}
+  healthDepleated:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2069701789}
+        m_TargetAssemblyTypeName: spawnNewTriggerEvent, Assembly-CSharp
+        m_MethodName: spawnNew
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
