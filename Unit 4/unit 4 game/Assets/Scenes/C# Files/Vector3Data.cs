@@ -8,7 +8,7 @@ public class Vector3Data : ScriptableObject
     public float y;
     public float z;
 
-    Vector3 returnVector3(){
+    public Vector3 returnVector3(){
         return new Vector3(x,y,z);
     }
 }

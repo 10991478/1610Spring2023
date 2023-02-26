@@ -823,6 +823,7 @@ GameObject:
   - component: {fileID: 1109329134}
   - component: {fileID: 1109329133}
   - component: {fileID: 1109329139}
+  - component: {fileID: 1109329140}
   m_Layer: 0
   m_Name: energyBall
   m_TagString: Untagged
@@ -860,6 +861,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1765366590}
         m_TargetAssemblyTypeName: FloatTextLabelBehavior, Assembly-CSharp
         m_MethodName: UpdateLabel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1109329140}
+        m_TargetAssemblyTypeName: jumpOnClickTriggerEvent, Assembly-CSharp
+        m_MethodName: jumpOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -984,6 +997,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1109329140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109329132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e7410d96d167a46957f6723f9f1369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jump: {fileID: 11400000, guid: e387b3b62aad03745b6e03366e9e4bf6, type: 2}
+  jumpingObject: {fileID: 1109329132}
 --- !u!1 &1229760802
 GameObject:
   m_ObjectHideFlags: 0
