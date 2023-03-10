@@ -8,10 +8,12 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     public float xbound = 25;
     public Transform blaster;
-    public GameObject lazerBolt;
+    public GameObject laserBolt;
     
     void Update()
     {
+
+//sideways movement + borders
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
 
@@ -21,5 +23,11 @@ public class PlayerController : MonoBehaviour
         if (transform.position.x > xbound){
             transform.position = new Vector3(xbound, transform.position.y, transform.position.z);
         }
+
+//shooting the lazer
+        if (Input.GetKeyDown(KeyCode.Space)){
+            Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);
+        }
+
     }
 }
