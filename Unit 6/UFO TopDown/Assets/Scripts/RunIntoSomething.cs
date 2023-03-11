@@ -16,6 +16,7 @@ public class RunIntoSomething : MonoBehaviour
     private void OnTriggerEnter(Collider other){
         if (other.gameObject == damagePowerUp){
             damage.addValue(damageIncrease);
+            print("Damage level is " + damage.value);
         }
         Destroy(other.gameObject);
     }
