@@ -12,6 +12,11 @@ public class DestroyOutOfBounds : MonoBehaviour
             Destroy(gameObject);
         }
         else if (transform.position.z < lowerBound){
+            if (gameObject.name != "DamagePowerUp")
+            {
+                print("Game over!");
+                Time.timeScale = 0;
+            }
             Destroy(gameObject);
         }
     }
