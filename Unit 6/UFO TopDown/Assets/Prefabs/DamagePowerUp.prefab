@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8847037697418322366}
   - component: {fileID: 8847037697418322365}
   - component: {fileID: 8847037697418322363}
+  - component: {fileID: -909899824576515390}
   m_Layer: 0
   m_Name: DamagePowerUp
   m_TagString: Untagged
@@ -29,14 +30,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8847037697418322364}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -17.68, y: 0, z: 3.33}
   m_LocalScale: {x: 1, y: 0.062994, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &8847037697418322361
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -129,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4361b8cfa2f62654a9214967a54f4cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -5
+  speed: 5
 --- !u!114 &8847037697418322363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,5 +143,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e8fe4e9d337e3740aaba7198c1d03b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upperBound: 10
+  upperBound: 30
   lowerBound: -15
+--- !u!114 &-909899824576515390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8847037697418322364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cab7c0e600f1574d8792219e51c9e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  mainColor: {r: 1, g: 0.61887145, b: 0, a: 0}
+  secondaryColor: {r: 1, g: 0, b: 0.94177055, a: 0}

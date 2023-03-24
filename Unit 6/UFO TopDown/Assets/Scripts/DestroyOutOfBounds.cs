@@ -8,15 +8,7 @@ public class DestroyOutOfBounds : MonoBehaviour
     public float lowerBound = -10.0f;
     void Update()
     {
-        if (transform.position.z > upperBound){
-            Destroy(gameObject);
-        }
-        else if (transform.position.z < lowerBound){
-            if (gameObject.name != "DamagePowerUp")
-            {
-                print("Game over!");
-                Time.timeScale = 0;
-            }
+        if (transform.position.z > upperBound || transform.position.z < lowerBound){
             Destroy(gameObject);
         }
     }

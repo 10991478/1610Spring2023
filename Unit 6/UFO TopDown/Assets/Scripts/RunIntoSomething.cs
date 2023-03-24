@@ -14,10 +14,10 @@ public class RunIntoSomething : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other){
-        if (other.gameObject == damagePowerUp){
+        if (other.gameObject.name == damagePowerUp.name + "(Clone)" || other.gameObject.name == damagePowerUp.name){
             damage.addValue(damageIncrease);
             print("Damage level is " + damage.value);
+            Destroy(other.gameObject);
         }
-        Destroy(other.gameObject);
     }
 }

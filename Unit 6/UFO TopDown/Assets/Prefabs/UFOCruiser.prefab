@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1219380931595996216}
   - component: {fileID: 1219380931595996223}
   - component: {fileID: 1219380931595996219}
-  - component: {fileID: 3646441031610467241}
   - component: {fileID: 7278569032555379889}
   - component: {fileID: -4393382834730136153}
+  - component: {fileID: -767570377265294470}
   m_Layer: 0
   m_Name: UFOCruiser
   m_TagString: Untagged
@@ -113,21 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4361b8cfa2f62654a9214967a54f4cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
---- !u!114 &3646441031610467241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1219380931595996222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e8fe4e9d337e3740aaba7198c1d03b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  upperBound: 30
-  lowerBound: -10
+  speed: 8
 --- !u!54 &7278569032555379889
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -156,3 +142,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b96869098dfeb7e4e8fb6b0acf9dffd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doDetect:
+  - {fileID: 8957490596492653539, guid: f6c6e6be823490640870c916ecd34daa, type: 3}
+--- !u!114 &-767570377265294470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219380931595996222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f66c5179a50da024db4b644f62077fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upperBound: 30
+  lowerBound: -10
