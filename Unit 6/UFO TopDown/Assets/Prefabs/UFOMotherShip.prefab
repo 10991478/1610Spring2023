@@ -142,6 +142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b96869098dfeb7e4e8fb6b0acf9dffd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  affectsScore: 1
+  scoreToGive: 20
+  scoreManager: {fileID: 0}
   doDetect:
   - {fileID: 8957490596492653539, guid: f6c6e6be823490640870c916ecd34daa, type: 3}
 --- !u!114 &3717644270614575132

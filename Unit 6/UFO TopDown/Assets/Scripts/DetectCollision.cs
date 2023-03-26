@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class DetectCollision : MonoBehaviour
 {
-    public GameObject[] doDetect;
+    public bool affectsScore;
+    public int scoreToGive;
+    public ScoreManager scoreManager; //stores reference to scoremanager
+    public GameObject[] doDetect; //list of objects to detect collisions with
+
+    void Start(){
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>(); //finds ScoreManager GameObject to reference its ScoreManager script component
+    }
     void OnTriggerEnter(Collider other)
     {
         bool detect = false;
@@ -15,10 +22,16 @@ public class DetectCollision : MonoBehaviour
                 break;
             };
         }
-        if (detect)
+
+        if (affectsScore) //adds to score if affectsScore is true
         {
-            Destroy(other.gameObject); //Destroys this object
-            Destroy(gameObject); //Destroys the other object
+            scoreManager.IncreaseScore(scoreToGive);
+        }
+
+        if (detect) //destroys both objects involved in collision if the other is on the list of objects to destroy
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
     }
 }
