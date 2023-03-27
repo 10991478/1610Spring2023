@@ -74,15 +74,31 @@ public class PlayerController : MonoBehaviour
                 }
                 break;
             case 4:
-                for (int i = -14; i <= 14; i += 7)
+                /*for (int i = -14; i <= 14; i += 7)
+                {
+                    Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation * Quaternion.Euler(0,i,0));
+                }*/
+                for (int i = -7; i <= 7; i += 14)
                 {
                     Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation * Quaternion.Euler(0,i,0));
                 }
+                for (float i = -1.5f; i <= 1.5f; i += 3f)
+                {
+                    Instantiate(laserBolt, blaster.transform.position + new Vector3(i,0,0), laserBolt.transform.rotation);
+                }
                 break;
             case 5:
-                for (int i = -16; i <= 16; i += 8)
+                /*for (int i = -16; i <= 16; i += 8)
                 {
                     Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation * Quaternion.Euler(0,i,0));
+                }*/
+                for (int i = -10; i <= 10; i += 10)
+                {
+                    Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation * Quaternion.Euler(0,i,0));
+                }
+                for (int i = -2; i <= 2; i += 4)
+                {
+                    Instantiate(laserBolt, blaster.transform.position + new Vector3(i,0,0), laserBolt.transform.rotation);
                 }
                 break;
             default:
