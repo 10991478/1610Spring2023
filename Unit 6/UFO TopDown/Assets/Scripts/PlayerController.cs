@@ -10,7 +10,9 @@ public class PlayerController : MonoBehaviour
     public Transform blaster;
     public GameObject laserBolt;
     public IntObj boltCount;
-    public float reloadTime;
+    public int startingBoltCount;
+    public FloatScriptableObject fireRate;
+    public float startingFireRate;
     private float timeSinceLastShot;
     private GameManager gameManager;
     
@@ -18,6 +20,8 @@ public class PlayerController : MonoBehaviour
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>(); //retrieving reference to GameManager script in GameManager object
         timeSinceLastShot = Time.time; //setting timeSinceLastShot to 0
+        boltCount.setValue(startingBoltCount);
+        fireRate.setValue(startingFireRate);
     }
     void Update()
     {
@@ -40,8 +44,8 @@ public class PlayerController : MonoBehaviour
 /*CONDITIONS FOR SHOOTING:
     1: Spacebar is being pressed
     2: Game is not over
-    3: The time since last shot is less than the reload time*/
-        if (Input.GetKey(KeyCode.Space) && gameManager.isGameOver == false && Time.time - timeSinceLastShot >= reloadTime){
+    3: The time since last shot is less than the fire rate*/
+        if (Input.GetKey(KeyCode.Space) && gameManager.isGameOver == false && Time.time - timeSinceLastShot >= fireRate.value){
             ShootLaser();
             timeSinceLastShot = Time.time;
         }

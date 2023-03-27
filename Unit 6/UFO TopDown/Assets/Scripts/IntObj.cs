@@ -4,22 +4,39 @@ using UnityEngine;
 public class IntObj : ScriptableObject
 {
     public int value;
-    public int valueLimit;
-    public bool hasLimit;
+    public bool hasUpperBound;
+    public int upperBound;
+    public bool hasLowerBound;
+    public int lowerBound;
+
 
     public void setValue(int newVal){
         value = newVal;
     }
     public void addValue(int addVal){
-        if (hasLimit)
+        if (hasUpperBound || hasLowerBound)
         {
-            if (value + addVal <= valueLimit)
+            if (hasUpperBound)
             {
-                value += addVal;
+                if (value + addVal > upperBound)
+                {
+                    value = upperBound;
+                }
+                else
+                {
+                    value += addVal;
+                }
             }
-            else
+            if (hasLowerBound)
             {
-                value = valueLimit;
+                if (value + addVal < lowerBound)
+                {
+                    value = lowerBound;
+                }
+                else
+                {
+                    value += addVal;
+                }
             }
         }
         else

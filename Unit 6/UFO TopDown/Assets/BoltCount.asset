@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: BoltCount
   m_EditorClassIdentifier: 
   value: 0
-  valueLimit: 5
-  hasLimit: 1
-  startValue: 1
+  hasUpperBound: 1
+  upperBound: 5
+  hasLowerBound: 0
+  lowerBound: 0

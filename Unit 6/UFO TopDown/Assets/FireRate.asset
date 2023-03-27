@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30dd5456c820bf0489d1f55a71f8cd25, type: 3}
   m_Name: FireRate
   m_EditorClassIdentifier: 
-  value: 1
+  value: 0
+  hasUpperBound: 0
+  hasLowerBound: 1
+  lowerBound: 0.5
+  upperBound: 1

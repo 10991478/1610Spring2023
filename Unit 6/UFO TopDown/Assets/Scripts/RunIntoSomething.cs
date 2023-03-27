@@ -6,13 +6,8 @@ public class RunIntoSomething : MonoBehaviour
 {
     public GameObject boltPickup;
     public IntObj boltCount;
-    public int startingBoltCount;
     public GameObject fireRatePickup;
-
-    void Awake()
-    {
-        boltCount.setValue(startingBoltCount);
-    }
+    public FloatScriptableObject fireRate;
 
 
     private void OnTriggerEnter(Collider other){
@@ -25,7 +20,8 @@ public class RunIntoSomething : MonoBehaviour
         }
         else if (other.gameObject.name == fireRatePickup.name + "(Clone)" || other.gameObject.name == fireRatePickup.name)
         {
-            print("Increased fire rate!");
+            fireRate.addValue(-0.1f);
+            print("Fire rate is " + fireRate.value);
             Destroy(other.gameObject);
         }
     }
