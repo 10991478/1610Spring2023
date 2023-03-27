@@ -9,11 +9,15 @@ public class PlayerController : MonoBehaviour
     public float xbound = 25;
     public Transform blaster;
     public GameObject laserBolt;
+    public IntObj boltCount;
+    public float reloadTime;
+    private float timeSinceLastShot;
     private GameManager gameManager;
     
     void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>(); //retrieving reference to GameManager script in GameManager object
+        timeSinceLastShot = Time.time; //setting timeSinceLastShot to 0
     }
     void Update()
     {
@@ -31,11 +35,55 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xbound, transform.position.y, transform.position.z);
         }
 
-//shooting the laser
-    //instatiating a laser when spacebar is pressed if game is still running
-        if (Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false ){
-            Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);
+
+//shoots laser & resets timeSinceLastShot
+/*CONDITIONS FOR SHOOTING:
+    1: Spacebar is being pressed
+    2: Game is not over
+    3: The time since last shot is less than the reload time*/
+        if (Input.GetKey(KeyCode.Space) && gameManager.isGameOver == false && Time.time - timeSinceLastShot >= reloadTime){
+            ShootLaser();
+            timeSinceLastShot = Time.time;
         }
 
+    }
+
+
+//shoots a different number of lasers at different angles based on boltCount IntObj object
+    void ShootLaser()
+    {
+        switch (boltCount.value)
+        {
+            case 1:
+                Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);
+                break;
+            case 2:
+                for (int i = -7; i <= 7; i += 14)
+                {
+                    Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation * Quaternion.Euler(0,i,0));
+                }
+                break;
+            case 3:
+                for (int i = -11; i <= 11; i += 11)
+                {
+                    Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation * Quaternion.Euler(0,i,0));
+                }
+                break;
+            case 4:
+                for (int i = -14; i <= 14; i += 7)
+                {
+                    Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation * Quaternion.Euler(0,i,0));
+                }
+                break;
+            case 5:
+                for (int i = -16; i <= 16; i += 8)
+                {
+                    Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation * Quaternion.Euler(0,i,0));
+                }
+                break;
+            default:
+                Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);
+                break;
+        }
     }
 }

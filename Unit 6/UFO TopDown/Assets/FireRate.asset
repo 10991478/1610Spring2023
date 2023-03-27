@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30dd5456c820bf0489d1f55a71f8cd25, type: 3}
-  m_Name: DamageLevel
+  m_Name: FireRate
   m_EditorClassIdentifier: 
   value: 1

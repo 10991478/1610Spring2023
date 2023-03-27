@@ -948,6 +948,8 @@ MonoBehaviour:
   xbound: 20
   blaster: {fileID: 1787502523}
   laserBolt: {fileID: 5756711612354465187, guid: dba5610ac0621644ebb67c04bbb12552, type: 3}
+  boltCount: {fileID: 11400000, guid: 10bba96d7fb9c7a42b3d2bda421f00cc, type: 2}
+  reloadTime: 0.9
 --- !u!114 &1599551101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -960,9 +962,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec6b5a5e029c4945ad490943e6d215c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boltPickUp: {fileID: 8847037697418322364, guid: 7d4f420d80e77c2449efdcfad001a8bd, type: 3}
+  boltPickup: {fileID: 8847037697418322364, guid: c38348b6b157fd04e8de1a82638033b0, type: 3}
   boltCount: {fileID: 11400000, guid: 10bba96d7fb9c7a42b3d2bda421f00cc, type: 2}
   startingBoltCount: 1
+  fireRatePickup: {fileID: 6690041754182211537, guid: a2a5773e1099b89448bead46ec65ba3d, type: 3}
 --- !u!1 &1630844072
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,7 +996,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupPrefabs:
-  - {fileID: 8847037697418322364, guid: 7d4f420d80e77c2449efdcfad001a8bd, type: 3}
+  - {fileID: 8847037697418322364, guid: c38348b6b157fd04e8de1a82638033b0, type: 3}
+  - {fileID: 6690041754182211537, guid: a2a5773e1099b89448bead46ec65ba3d, type: 3}
 --- !u!4 &1630844074
 Transform:
   m_ObjectHideFlags: 0
