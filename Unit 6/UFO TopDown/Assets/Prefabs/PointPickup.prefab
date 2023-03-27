@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8847037697418322363}
   - component: {fileID: -909899824576515390}
   m_Layer: 0
-  m_Name: BoltPickup
+  m_Name: PointPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 95b9d50740e717248bf4995bded8f6bc, type: 2}
+  - {fileID: 2100000, guid: e078b4dd623d4254195945d525fabcd9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,5 +158,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  mainColor: {r: 1, g: 0, b: 0.12644863, a: 0}
-  secondaryColor: {r: 0.8551984, g: 0, b: 1, a: 0}
+  mainColor: {r: 1, g: 0.8887266, b: 0, a: 0}
+  secondaryColor: {r: 1, g: 0.47949448, b: 0, a: 0.39215687}
