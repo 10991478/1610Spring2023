@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4588287807790530411}
   - component: {fileID: 3091551581704360769}
   - component: {fileID: 8198546368999921736}
+  - component: {fileID: 273740363997184950}
+  - component: {fileID: 2404993605505038894}
   m_Layer: 0
   m_Name: BoltPickupText
   m_TagString: Untagged
@@ -90,10 +92,36 @@ TextMesh:
   m_Anchor: 0
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 8
+  m_FontSize: 10
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
   m_Color:
     serializedVersion: 2
     rgba: 4283351807
+--- !u!114 &273740363997184950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5042963289572908826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8b2aa6765c540a40ae82f442b51ac41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBeforeDestruction: 0.4
+--- !u!114 &2404993605505038894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5042963289572908826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045a71ffa002a2c4faa6284b16bb734d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
