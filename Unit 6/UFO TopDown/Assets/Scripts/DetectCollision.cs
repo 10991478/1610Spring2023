@@ -23,13 +23,14 @@ public class DetectCollision : MonoBehaviour
             };
         }
 
-        if (affectsScore) //adds to score if affectsScore is true
-        {
-            scoreManager.IncreaseScore(scoreToGive);
-        }
+        
 
         if (detect) //destroys both objects involved in collision if the other is on the list of objects to destroy
         {
+            if (affectsScore) //adds to score if affectsScore is true
+            {
+                scoreManager.IncreaseScore(scoreToGive);
+            }
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

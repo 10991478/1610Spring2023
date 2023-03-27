@@ -971,7 +971,7 @@ MonoBehaviour:
   fireRate: {fileID: 11400000, guid: 272a510b607225749a1d9d209f396113, type: 2}
   fireRateText: {fileID: 5042963289572908826, guid: 27e823a397ae21d4092cfe40ce48b196, type: 3}
   pointPickup: {fileID: 8847037697418322364, guid: 58fb4b137dc3f814abed89d96530330d, type: 3}
-  pickupReward: 100
+  pickupReward: 150
   pointPickupText: {fileID: 5042963289572908826, guid: 464ed25871270b54d8a951620faf39f3, type: 3}
 --- !u!1 &1630844072
 GameObject:
