@@ -9,7 +9,12 @@ public class PlayerController : MonoBehaviour
     public float xbound = 25;
     public Transform blaster;
     public GameObject laserBolt;
+    private GameManager gameManager;
     
+    void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
     void Update()
     {
 
@@ -27,8 +32,8 @@ public class PlayerController : MonoBehaviour
         }
 
 //shooting the laser
-    //instatiating a laser when spacebar is pressed
-        if (Input.GetKeyDown(KeyCode.Space)){
+    //instatiating a laser when spacebar is pressed if game is still running
+        if (Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false ){
             Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);
         }
 

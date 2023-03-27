@@ -6,7 +6,7 @@ public class DetectCollision : MonoBehaviour
 {
     public bool affectsScore;
     public int scoreToGive;
-    public ScoreManager scoreManager; //stores reference to scoremanager
+    private ScoreManager scoreManager; //stores reference to scoremanager
     public GameObject[] doDetect; //list of objects to detect collisions with
 
     void Start(){

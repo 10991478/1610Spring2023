@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class RunIntoSomething : MonoBehaviour
 {
-    public GameObject damagePowerUp;
-    public FloatScriptableObject damage;
-    public float startingDamageLevel;
-    public float damageIncrease;
+    public GameObject boltPickUp;
+    public IntObj boltCount;
+    public int startingBoltCount;
 
-    private void Awake(){
-        damage.setValue(startingDamageLevel);
+    void Awake()
+    {
+        boltCount.setValue(startingBoltCount);
     }
 
+
     private void OnTriggerEnter(Collider other){
-        if (other.gameObject.name == damagePowerUp.name + "(Clone)" || other.gameObject.name == damagePowerUp.name){
-            damage.addValue(damageIncrease);
-            print("Damage level is " + damage.value);
+        if (other.gameObject.name == boltPickUp.name + "(Clone)" || other.gameObject.name == boltPickUp.name){
+            boltCount.addValue(1);
+            print("Bolt count is " + boltCount.value);
             Destroy(other.gameObject);
         }
     }

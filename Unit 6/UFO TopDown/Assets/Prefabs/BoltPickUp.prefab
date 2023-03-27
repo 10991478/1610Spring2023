@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8847037697418322363}
   - component: {fileID: -909899824576515390}
   m_Layer: 0
-  m_Name: DamagePowerUp
+  m_Name: BoltPickUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
