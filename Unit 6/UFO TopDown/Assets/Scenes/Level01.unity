@@ -966,8 +966,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boltPickup: {fileID: 8847037697418322364, guid: c38348b6b157fd04e8de1a82638033b0, type: 3}
   boltCount: {fileID: 11400000, guid: 10bba96d7fb9c7a42b3d2bda421f00cc, type: 2}
+  boltPickupText: {fileID: 5042963289572908826, guid: 817313a3c2d7ff2458bd45901dfc72e4, type: 3}
   fireRatePickup: {fileID: 6690041754182211537, guid: a2a5773e1099b89448bead46ec65ba3d, type: 3}
   fireRate: {fileID: 11400000, guid: 272a510b607225749a1d9d209f396113, type: 2}
+  fireRateText: {fileID: 5042963289572908826, guid: 27e823a397ae21d4092cfe40ce48b196, type: 3}
 --- !u!1 &1630844072
 GameObject:
   m_ObjectHideFlags: 0
