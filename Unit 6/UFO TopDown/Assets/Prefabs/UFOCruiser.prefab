@@ -143,8 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   affectsScore: 1
-  scoreToGive: 10
-  scoreManager: {fileID: 0}
+  scoreToGive: 15
   doDetect:
   - {fileID: 8957490596492653539, guid: f6c6e6be823490640870c916ecd34daa, type: 3}
 --- !u!114 &-767570377265294470
