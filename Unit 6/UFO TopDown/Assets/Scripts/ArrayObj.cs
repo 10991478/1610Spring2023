@@ -23,4 +23,13 @@ public class ArrayObj : ScriptableObject
     {
         return stringArray[pos];
     }
+
+    public int getIntArrayLength()
+    {
+        return intArray.Length;
+    }
+    public int getStringArrayLength()
+    {
+        return stringArray.Length;
+    }
 }
