@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     public bool isGameOver;
     private GameObject gameOverText;
     private int framesUntilMenu;
+    private int framesPassed;
+    private ScoreManager scoreManager;
+    public GameObject inputObject;
 
     void Awake()
     {
@@ -17,7 +20,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         gameOverText = GameObject.Find("GameOverText");
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         framesUntilMenu = 500;
+        framesPassed = 0;
     }
 
     void Update()
@@ -25,12 +30,19 @@ public class GameManager : MonoBehaviour
         if(isGameOver) //ends the game if isGameOver is true
         {
             EndGame();
-            framesUntilMenu--;
-            if (framesUntilMenu <= 0)
+            framesPassed++;
+            if (!scoreManager.canAddToScoreboard()) //if the score isn't high enough to go on the scoreboard, go back to the menu after a bunch of frames have passed
             {
-                SceneManager.LoadScene(0);
+                if (framesPassed >= framesUntilMenu)
+                {
+                    SceneManager.LoadScene(0);
+                }
             }
-            if (framesUntilMenu % 50 == 0)
+            else
+            {
+                inputObject.gameObject.SetActive(true); //sets the input object to active so it can take your name
+            }
+            if (framesPassed % 50 == 0)
             {
                 BlinkObj(gameOverText);
             }
@@ -50,5 +62,9 @@ public class GameManager : MonoBehaviour
     void BlinkObj(GameObject blinkingObj)
     {
         blinkingObj.gameObject.SetActive(!blinkingObj.gameObject.activeInHierarchy);
+    }
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

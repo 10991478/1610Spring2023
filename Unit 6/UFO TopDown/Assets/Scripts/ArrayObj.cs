@@ -32,4 +32,18 @@ public class ArrayObj : ScriptableObject
     {
         return stringArray.Length;
     }
+
+    public void insert(int pos, string str, int num)
+    {
+        for (int i = intArray.Length - 1; i > pos; i--)
+        {
+            intArray[i] = intArray[i-1];
+        }
+        intArray[pos] = num;
+        for (int i = stringArray.Length - 1; i > pos; i--)
+        {
+            stringArray[i] = stringArray[i-1];
+        }
+        stringArray[pos] = str;
+    }
 }
