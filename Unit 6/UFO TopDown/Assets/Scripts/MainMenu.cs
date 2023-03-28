@@ -5,17 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public int sceneToLoad;
+    public int level01SceneNum;
+    public int scoreboardSceneNum;
 
     public void StartGame()
     {
-        SceneManager.LoadScene(sceneToLoad); // scene to load
-        Debug.Log("New Scene Loaded!");
+        SceneManager.LoadScene(level01SceneNum); // scene to load
+        Debug.Log("Level 1 loaded");
     }
 
     public void QuitGame()
     {
         Application.Quit();
-        Debug.Log("Quit Game!");
+        Debug.Log("Quit Game");
+    }
+
+    public void AccessScoreboard()
+    {
+        SceneManager.LoadScene(scoreboardSceneNum); // scene to load
+        Debug.Log("Scoreboard loaded");
     }
 }
