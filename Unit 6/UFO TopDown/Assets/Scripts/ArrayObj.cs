@@ -6,6 +6,7 @@ public class ArrayObj : ScriptableObject
     public int[] intArray;
     public string[] stringArray;
 
+
     public void setItem(int pos, int num)
     {
         intArray[pos] = num;
