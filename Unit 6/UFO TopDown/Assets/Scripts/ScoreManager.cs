@@ -36,15 +36,6 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "Score : " + score;
     }
 
-    /*void Update()
-    {
-        if (gameManager.isGameOver && !scoreAlreadyAdded)
-        {
-            addToScoreboard();
-            scoreAlreadyAdded = true;
-        }
-    }*/
-
     public bool canAddToScoreboard(){
         bool canAdd = true;
         int insertPos = -1;

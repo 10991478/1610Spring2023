@@ -25,10 +25,11 @@ public class Scoreboard : MonoBehaviour
 //Updates name and score text objects with the scoreboard ArrayObj information
     void UpdateScoreboard()
     {
+        Debug.Log("Scoreboard updated");
         string nameText = "";
         for (int i = 0; i < scoreboard.getStringArrayLength(); i++)
         {
-            nameText += scoreboard.getString(i) + "\n";
+            nameText += (i+1) + ". " + scoreboard.getString(i) + "\n";
         }
         names.text = nameText;
 

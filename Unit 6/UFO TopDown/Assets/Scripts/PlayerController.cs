@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
 
 
 //shoots a different number of lasers at different angles based on boltCount IntObj object
+    //When bolt count is 4 or 5, two of the bolts spawn on the sides pointed forward, while the others spawn at the blaster at tilted angles
     void ShootLaser()
     {
         switch (boltCount.value)
@@ -74,10 +75,6 @@ public class PlayerController : MonoBehaviour
                 }
                 break;
             case 4:
-                /*for (int i = -14; i <= 14; i += 7)
-                {
-                    Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation * Quaternion.Euler(0,i,0));
-                }*/
                 for (int i = -7; i <= 7; i += 14)
                 {
                     Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation * Quaternion.Euler(0,i,0));
@@ -88,10 +85,6 @@ public class PlayerController : MonoBehaviour
                 }
                 break;
             case 5:
-                /*for (int i = -16; i <= 16; i += 8)
-                {
-                    Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation * Quaternion.Euler(0,i,0));
-                }*/
                 for (int i = -10; i <= 10; i += 10)
                 {
                     Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation * Quaternion.Euler(0,i,0));

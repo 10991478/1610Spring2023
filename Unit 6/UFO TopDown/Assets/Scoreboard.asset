@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef0035bd484100b45b338796ddef70f5, type: 3}
   m_Name: Scoreboard
   m_EditorClassIdentifier: 
-  intArray: 0100000002000000030000000400000005000000
+  intArray: 0000000000000000000000000000000000000000
   stringArray:
-  - Name1
-  - Name2
-  - Name3
-  - Name4
-  - Name5
+  - 
+  - 
+  - 
+  - 
+  - 
