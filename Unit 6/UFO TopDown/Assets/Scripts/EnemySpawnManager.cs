@@ -8,7 +8,7 @@ public class EnemySpawnManager : MonoBehaviour
     private float spawnRangeX = 20f;
     private float spawnPosZ = 15f;
     private float L = 1f;
-    private float k;
+    private float k; //set in Start()
     private float h = 1.25f;
     private float m = 60f;
     private float timeBetweenSpawns; //this is the output of LogisticFunction()
@@ -18,7 +18,20 @@ public class EnemySpawnManager : MonoBehaviour
     void Start()
     {
         timeOfLastSpawn = Time.time - 3f; //there's a bit of a delay at the beginning before the first ufo is spawned
-        k = -8f/m;
+        k = -8f/m; 
+/*WHY IS K SET TO -8/m?
+    The reason why k is set to -8/m is so that if I want to change m (the midway point of the curve),
+    the steepness of the curve will change with it, making the output when x = 0 always be the same number (it's a number very, very, very close to L + h), no matter what m is set to.
+    This is ideal because then we always get to start with a value that basically is the same as the top of the function, L + h
+        P.S. Sidenote, I figured out how to do this by messing around on desmos for about three minutes. Setting k to -8/m will always work even if L, h, and m are all set to different values.
+            P.P.S This trick works to anchor a value at 0 with any number, not just 8 for k = -8/m.
+            I just picked 8 because it's a good number for f(0) to be very very close to L + h.
+            Heres why the trick always works:
+                1. When x = 0, (-k(x-m)) = (-k(0-m)) = (-k(-m)) = k*m
+                2. If k = p/m, where p is just any real number, the k*m = (p/m)*m = (p)m/m = p(1) = p
+                3. This means that (-k(x-m)) would always just equal p, no matter what m is as long as x=0 and k = p/m (p being any real number).
+                4. This makes f(0) = L/(1+e^(-k(x-m)))+h = L/(1+e^p)+h, so the output at 0 is now entirely dependent on L, h, and p, effectively anchoring the output for when x = 0 by not changing when m is changed
+*/
     }
 
     void Update()

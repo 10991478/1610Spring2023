@@ -6,14 +6,14 @@ public class FloatScriptableObject : ScriptableObject
     public float value;
     public bool hasUpperBound;
     public bool hasLowerBound;
-    public float lowerBound;
-    public float upperBound;
+    public float lowerBound; //lower limit for value if hasLowerBound is true
+    public float upperBound; //upper limit for value if hasUpperBound is true
 
     public void setValue(float newVal){
         value = newVal;
     }
 
-    //adds to the value
+    //addValue() adds to value
     /*WHEN ADDING:
         1: If not constrained, add to value
         2: If constrained:

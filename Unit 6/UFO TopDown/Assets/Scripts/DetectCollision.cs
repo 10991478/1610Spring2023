@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DetectCollision : MonoBehaviour
 {
-    public bool affectsScore;
-    public int scoreToGive;
+    public bool affectsScore; //tells you whether or not to add to the score when collision is detected
+    public int scoreToGive; //number added to the score if affectsScore is true
     private ScoreManager scoreManager; //stores reference to scoremanager
     public GameObject[] doDetect; //list of objects to detect collisions with
 
@@ -14,9 +14,9 @@ public class DetectCollision : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        bool detect = false;
+        bool detect = false; //tells you whether or not to detect the collision
         foreach (GameObject item in doDetect){
-            if (other.gameObject.name == item.name + "(Clone)" || other.gameObject.name == item.name) //only detects the gameObject if it's a clone of any gameObjects in the doDetect list
+            if (other.gameObject.name == item.name + "(Clone)" || other.gameObject.name == item.name) //sets detect to true if the other object is a clone of any gameObjects in the doDetect list
             {
                 detect = true;
                 break;
