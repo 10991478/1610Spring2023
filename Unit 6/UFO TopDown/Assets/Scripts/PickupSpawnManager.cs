@@ -7,8 +7,8 @@ public class PickupSpawnManager : MonoBehaviour
     public GameObject[] pickupPrefabs; //Array to store pickups
     private float spawnRangeX = 20f;
     private float spawnPosZ = 20f;
-    private float startDelay = 6f;
-    private float spawnInterval = 5f;
+    private float startDelay = 4f;
+    private float spawnInterval = 3.5f;
     public IntObj boltCount;
     public FloatScriptableObject fireRate;
     private bool hasBoltBeenRemoved;
