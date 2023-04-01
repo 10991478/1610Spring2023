@@ -17,7 +17,7 @@ public class EnemySpawnManager : MonoBehaviour
 
     void Start()
     {
-        timeOfLastSpawn = Time.time - 3f; //there's a bit of a delay at the beginning before the first ufo is spawned
+        timeOfLastSpawn = Time.time + 3f; //there's a bit of a delay at the beginning before the first ufo is spawned
         k = -8f/m; 
 /*WHY IS K SET TO -8/m?
     The reason why k is set to -8/m is so that if I want to change m (the midway point of the curve),

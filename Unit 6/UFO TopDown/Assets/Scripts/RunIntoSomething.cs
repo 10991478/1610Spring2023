@@ -14,15 +14,19 @@ public class RunIntoSomething : MonoBehaviour
     private ScoreManager scoreManager;
     public int pickupReward;
     public GameObject pointPickupText;
+    private AudioSource playerAudio;
+    public AudioClip pickupSound;
 
     void Awake(){
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>(); //finds ScoreManager GameObject to reference its ScoreManager script component
+        playerAudio = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other){
 //if the objet is a boltpickup object, add 1 to the bolt count and destroy the pickup
         if (other.gameObject.name == boltPickup.name + "(Clone)" || other.gameObject.name == boltPickup.name)
         {
+            playerAudio.PlayOneShot(pickupSound, 0.5f);
             boltCount.addValue(1);
             Instantiate(boltPickupText,transform.position,Quaternion.Euler(90,0,0));
             Destroy(other.gameObject);
@@ -30,6 +34,7 @@ public class RunIntoSomething : MonoBehaviour
 //if the object is a fireRatePickup object, decrease FireRate (decreases the time between shots) and destroy the pickup
         else if (other.gameObject.name == fireRatePickup.name + "(Clone)" || other.gameObject.name == fireRatePickup.name)
         {
+            playerAudio.PlayOneShot(pickupSound, 0.5f);
             fireRate.addValue(-0.1f);
             Instantiate(fireRateText,transform.position,Quaternion.Euler(90,0,0));
             Destroy(other.gameObject);
@@ -37,6 +42,7 @@ public class RunIntoSomething : MonoBehaviour
 //if the object is a pointPickup object, increase the score
         else if (other.gameObject.name == pointPickup.name + "(Clone)" || other.gameObject.name == pointPickup.name)
         {
+            playerAudio.PlayOneShot(pickupSound, 0.5f);
             scoreManager.IncreaseScore(pickupReward);
             GameObject text = Instantiate(pointPickupText,transform.position,Quaternion.Euler(90,0,0));
             text.GetComponent<TextMesh>().text = "+ " + pickupReward + " points";

@@ -8,9 +8,12 @@ public class DetectCollision : MonoBehaviour
     public int scoreToGive; //number added to the score if affectsScore is true
     private ScoreManager scoreManager; //stores reference to scoremanager
     public GameObject[] doDetect; //list of objects to detect collisions with
+    public AudioClip clip;
+    private SoundtrackManager soundtrackManager;
 
     void Start(){
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>(); //finds ScoreManager GameObject to reference its ScoreManager script component
+        soundtrackManager = GameObject.Find("SoundtrackManager").GetComponent<SoundtrackManager>();
     }
     void OnTriggerEnter(Collider other)
     {
@@ -23,10 +26,10 @@ public class DetectCollision : MonoBehaviour
             };
         }
 
-        
 
         if (detect) //destroys both objects involved in collision if the other is on the list of objects to destroy
         {
+            soundtrackManager.PlaySound(clip,1f);
             if (affectsScore) //adds to score if affectsScore is true
             {
                 scoreManager.IncreaseScore(scoreToGive);

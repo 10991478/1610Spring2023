@@ -146,6 +146,7 @@ MonoBehaviour:
   scoreToGive: 30
   doDetect:
   - {fileID: 8957490596492653539, guid: f6c6e6be823490640870c916ecd34daa, type: 3}
+  clip: {fileID: 8300000, guid: ab740077d7744c54ea017e95253959aa, type: 3}
 --- !u!114 &7547781645895438247
 MonoBehaviour:
   m_ObjectHideFlags: 0

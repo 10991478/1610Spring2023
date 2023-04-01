@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     public float xbound = 25;
     public Transform blaster;
+    private AudioSource playerAudio;
+    public AudioClip laserSound;
     public GameObject laserBolt;
     public IntObj boltCount;
     public int startingBoltCount;
@@ -22,6 +24,7 @@ public class PlayerController : MonoBehaviour
         timeSinceLastShot = Time.time; //setting timeSinceLastShot to 0
         boltCount.setValue(startingBoltCount);
         fireRate.setValue(startingFireRate);
+        playerAudio = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -57,6 +60,7 @@ public class PlayerController : MonoBehaviour
     //When bolt count is 4 or 5, two of the bolts spawn on the sides pointed forward, while the others spawn at the blaster at tilted angles
     void ShootLaser()
     {
+        playerAudio.PlayOneShot(laserSound, 0.5f);
         switch (boltCount.value)
         {
             case 1:

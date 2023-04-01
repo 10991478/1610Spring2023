@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
     private int framesPassed; //keeps track of the number of frames passed after game over
     private ScoreManager scoreManager; 
     public GameObject inputObject; //this is the object to input your name for the scoreboard after you die
+    private SoundtrackManager soundtrackManager;
+    private bool playedGameOverSound;
+    public AudioClip lowScoreSound;
+    public AudioClip highScoreSound;
 
     void Awake()
     {
@@ -21,8 +25,10 @@ public class GameManager : MonoBehaviour
     {
         gameOverText = GameObject.Find("GameOverText");
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        soundtrackManager = GameObject.Find("SoundtrackManager").GetComponent<SoundtrackManager>();
         framesUntilMenu = 500;
         framesPassed = 0;
+        playedGameOverSound = false;
     }
 
     void Update()
@@ -33,6 +39,12 @@ public class GameManager : MonoBehaviour
             framesPassed++;
             if (!scoreManager.canAddToScoreboard()) //if the score isn't high enough to go on the scoreboard, go back to the menu after a bunch of frames have passed
             {
+                if (!playedGameOverSound)
+                {
+                    soundtrackManager.StopMusic();
+                    soundtrackManager.PlaySound(lowScoreSound, 1f);
+                    playedGameOverSound = true;
+                }
                 if (framesPassed >= framesUntilMenu)
                 {
                     SceneManager.LoadScene(0);
@@ -40,6 +52,12 @@ public class GameManager : MonoBehaviour
             }
             else
             {
+                if (!playedGameOverSound)
+                {
+                    soundtrackManager.StopMusic();
+                    soundtrackManager.PlaySound(highScoreSound, 1f);
+                    playedGameOverSound = true;
+                }
                 inputObject.gameObject.SetActive(true); //sets the input object to active so it can take your name
             }
             if (framesPassed % 50 == 0) //blinks "Game Over" on and off every 50 frames
