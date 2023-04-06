@@ -1,25 +1,25 @@
 using UnityEngine;
 using UnityEngine.Events;
 [CreateAssetMenu]
-public class intObj : ScriptableObject
+public class IntObj : ScriptableObject
 {
     public int value;
 
-    public void addVal(int num)
+    public void AddVal(int num)
     {
         value += num;
     }
 
-    public void setVal(int num)
+    public void SetVal(int num)
     {
         value = num;
     }
-    public void setVal(intObj obj)
+    public void SetVal(IntObj obj)
     {
         value = obj.value;
     }
 
-    public void compareVal(intObj obj)
+    public void CompareVal(IntObj obj)
     {
         if (obj.value > value)
         {

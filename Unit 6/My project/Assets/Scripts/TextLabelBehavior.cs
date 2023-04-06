@@ -17,7 +17,7 @@ public class TextLabelBehavior : MonoBehaviour
         startEvent.Invoke();
     }
 
-    public void UpdateLabel(floatObj dataObj){
+    public void UpdateLabel(FloatObj dataObj){
         if (roundToInt){
             int displayVal = (int)dataObj.value;
             label.text = displayVal.ToString(CultureInfo.InvariantCulture);
@@ -27,7 +27,7 @@ public class TextLabelBehavior : MonoBehaviour
         }
     }
 
-    public void UpdateLabel(intObj dataObj){
+    public void UpdateLabel(IntObj dataObj){
         label.text = dataObj.value.ToString(CultureInfo.InvariantCulture);
     }
     

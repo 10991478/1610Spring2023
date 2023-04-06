@@ -163,8 +163,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 486236283f981f444be8deb039a72f6f, type: 2}
-        m_TargetAssemblyTypeName: intObj, Assembly-CSharp
-        m_MethodName: addVal
+        m_TargetAssemblyTypeName: IntObj, Assembly-CSharp
+        m_MethodName: AddVal
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -180,7 +180,7 @@ MonoBehaviour:
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 486236283f981f444be8deb039a72f6f, type: 2}
-          m_ObjectArgumentAssemblyTypeName: intObj, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: IntObj, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -202,8 +202,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 486236283f981f444be8deb039a72f6f, type: 2}
-        m_TargetAssemblyTypeName: intObj, Assembly-CSharp
-        m_MethodName: addVal
+        m_TargetAssemblyTypeName: IntObj, Assembly-CSharp
+        m_MethodName: AddVal
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -219,7 +219,7 @@ MonoBehaviour:
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 486236283f981f444be8deb039a72f6f, type: 2}
-          m_ObjectArgumentAssemblyTypeName: intObj, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: IntObj, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -475,7 +475,7 @@ MonoBehaviour:
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: f82ef43f7d0ff364bb58227fce29112d, type: 2}
-          m_ObjectArgumentAssemblyTypeName: intObj, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: IntObj, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -485,12 +485,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: f82ef43f7d0ff364bb58227fce29112d, type: 2}
-        m_TargetAssemblyTypeName: intObj, Assembly-CSharp
-        m_MethodName: compareVal
+        m_TargetAssemblyTypeName: IntObj, Assembly-CSharp
+        m_MethodName: CompareVal
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 486236283f981f444be8deb039a72f6f, type: 2}
-          m_ObjectArgumentAssemblyTypeName: intObj, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: IntObj, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1162,8 +1162,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 486236283f981f444be8deb039a72f6f, type: 2}
-        m_TargetAssemblyTypeName: intObj, Assembly-CSharp
-        m_MethodName: setVal
+        m_TargetAssemblyTypeName: IntObj, Assembly-CSharp
+        m_MethodName: SetVal
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1179,7 +1179,7 @@ MonoBehaviour:
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 486236283f981f444be8deb039a72f6f, type: 2}
-          m_ObjectArgumentAssemblyTypeName: intObj, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: IntObj, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

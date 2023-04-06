@@ -2,7 +2,7 @@ using UnityEngine;
 
 [CreateAssetMenu]
 
-public class floatObj : ScriptableObject
+public class FloatObj : ScriptableObject
 {
     public float value;
     public bool hasLimit;
@@ -10,7 +10,7 @@ public class floatObj : ScriptableObject
     public float limit;
     public float minimum;
     public float decayRate;
-    public void addToValue(float num){
+    public void AddToValue(float num){
         if (value != limit){
             value += num;
             if (value > limit){
@@ -19,11 +19,11 @@ public class floatObj : ScriptableObject
         }
     }
 
-    public void setValue(float num){
+    public void SetValue(float num){
         value = num;
     }
 
-    public void decay(){
+    public void Decay(){
         if (value - decayRate < minimum){
             if (!hasMinimum){
                 value -= decayRate;
