@@ -5,12 +5,14 @@ using UnityEngine;
 public class SetScriptActive : MonoBehaviour
 {
 
-    void OnMouseDrag()
+    void OnMouseDown()
     {
-        GetComponent<MatchBehavior>().enabled = true;
+        Debug.Log("Mouse down on " + gameObject.name);
+        this.GetComponent<MatchBehavior>().enabled = true;
     }
-    void OnMouseExit()
+    void OnMouseUp()
     {
-        GetComponent<MatchBehavior>().enabled = false;
+        Debug.Log("Mouse up from " + gameObject.name);
+        this.GetComponent<MatchBehavior>().enabled = false;
     }
 }
