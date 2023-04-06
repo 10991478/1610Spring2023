@@ -137,6 +137,8 @@ GameObject:
   - component: {fileID: 28457536}
   - component: {fileID: 28457541}
   - component: {fileID: 28457540}
+  - component: {fileID: 28457542}
+  - component: {fileID: 28457543}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -171,6 +173,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 28457543}
+        m_TargetAssemblyTypeName: SpriteBehavior, Assembly-CSharp
+        m_MethodName: ChangeRendererColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   noMatchEvent:
     m_PersistentCalls:
       m_Calls:
@@ -198,7 +212,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05313a94ab3e4fd42b11efa7c6722f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idObj: {fileID: 11400000, guid: daa9f110099bb6e4fa4a45a9e6b9b8de, type: 2}
+  idObj: {fileID: 11400000, guid: 2c1332a5f3590af43845478771c3a701, type: 2}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &28457538
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -295,6 +312,30 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &28457542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28457535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c217761fcce294994d0704d28d9f93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &28457543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28457535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cbce9593fceb0c44b52760da043ef3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,6 +434,8 @@ GameObject:
   - component: {fileID: 1212806688}
   - component: {fileID: 1212806693}
   - component: {fileID: 1212806692}
+  - component: {fileID: 1212806695}
+  - component: {fileID: 1212806694}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -466,7 +509,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05313a94ab3e4fd42b11efa7c6722f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idObj: {fileID: 11400000, guid: fd7127926b8ae8642a13f2c6bcaa951b, type: 2}
+  idObj: {fileID: 11400000, guid: 2c1332a5f3590af43845478771c3a701, type: 2}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1212806695}
+        m_TargetAssemblyTypeName: SpriteBehavior, Assembly-CSharp
+        m_MethodName: ChangeRendererColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!212 &1212806690
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -563,3 +621,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1212806694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212806687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c217761fcce294994d0704d28d9f93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1212806695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212806687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cbce9593fceb0c44b52760da043ef3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
