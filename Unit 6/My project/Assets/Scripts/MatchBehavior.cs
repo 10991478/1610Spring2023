@@ -26,6 +26,7 @@ public class MatchBehavior : MonoBehaviour
         else
         {
             noMatchEvent.Invoke();
+            GetComponent<DraggableBehavior>().everythingFrozen = true;
             yield return new WaitForSeconds(0.5f);
             noMatchDelayedEvent.Invoke();
         }

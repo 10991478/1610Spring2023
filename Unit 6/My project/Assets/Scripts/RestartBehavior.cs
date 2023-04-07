@@ -1,10 +1,14 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class RestartBehavior : MonoBehaviour
 {
+    public UnityEvent restartEvent;
+
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        gameObject.transform.position = Vector3.zero;
+        GetComponent<DraggableBehavior>().everythingFrozen = false;
+        restartEvent.Invoke();
     }
 }

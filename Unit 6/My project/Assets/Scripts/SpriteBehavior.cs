@@ -18,4 +18,9 @@ public class SpriteBehavior : MonoBehaviour
         obj = (ColorID)GetComponent<IDContainerBehavior>().idObj;
         rendererObj.color = obj.value;
     }
+
+    public void SetRendererWhite()
+    {
+        rendererObj.color = Color.white;
+    }
 }
