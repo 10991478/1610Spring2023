@@ -265,11 +265,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 0b1e19cbb33c3594ca2fbc477bde5855, type: 2}
         m_TargetAssemblyTypeName: Instancer, Assembly-CSharp
-        m_MethodName: CreateInstance
+        m_MethodName: CreateInstanceFromListRandomly
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2048683949195315306, guid: 5114bf7140a191c41a958e1bf2052d12, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 0fc98bfd824a2414c9bab007833a568f, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Vector3ObjList, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -277,7 +277,7 @@ MonoBehaviour:
         m_CallState: 2
   counterNum: {fileID: 0}
   canRun: 0
-  seconds: 3
+  seconds: 1
 --- !u!4 &1984029440
 Transform:
   m_ObjectHideFlags: 0
