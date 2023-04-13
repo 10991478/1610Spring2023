@@ -10,6 +10,7 @@ public class DraggableBehavior : MonoBehaviour
     public bool everythingFrozen;
     public Vector3 position, offset;
     public UnityEvent startDragEvent, endDragEvent;
+    private WaitForFixedUpdate wffuObj;
 
     void Awake()
     {
@@ -24,11 +25,11 @@ public class DraggableBehavior : MonoBehaviour
             offset = transform.position - cameraObj.ScreenToWorldPoint(Input.mousePosition);
             draggable = true;
             startDragEvent.Invoke();
-            yield return new WaitForFixedUpdate();
+            yield return wffuObj;
 
             while (draggable & !everythingFrozen)
             {
-                yield return new WaitForFixedUpdate();
+                yield return wffuObj;
                 position = cameraObj.ScreenToWorldPoint(Input.mousePosition) + offset;
                 transform.position = position;
             }
