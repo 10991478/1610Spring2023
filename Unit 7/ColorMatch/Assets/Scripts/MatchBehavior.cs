@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class MatchBehavior : MonoBehaviour
 {
-    private ID idObj;
+    public ID idObj;
     public UnityEvent matchEvent, noMatchEvent, noMatchDelayedEvent;
     void Start()
     {
