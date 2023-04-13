@@ -10,13 +10,21 @@ public class SpriteBehavior : MonoBehaviour
 
     public void ChangeRendererColor()
     {
-        ColorID obj;
         if (GetComponent<IDContainerBehavior>().idObj.GetType() != typeof(ColorID))
         {
             return;
         }
-        obj = (ColorID)GetComponent<IDContainerBehavior>().idObj;
+        ColorID obj = (ColorID)GetComponent<IDContainerBehavior>().idObj;
         rendererObj.color = obj.value;
+    }
+    public void ChangeRendererColor(ColorID obj)
+    {
+        rendererObj.color = obj.value;
+    }
+
+    public void ChangeRendererColor(ColorIDObjList obj)
+    {
+        rendererObj.color = obj.currentColor.value;
     }
 
     public void SetRendererWhite()
