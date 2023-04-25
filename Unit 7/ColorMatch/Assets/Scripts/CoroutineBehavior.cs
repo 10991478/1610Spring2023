@@ -42,6 +42,11 @@ public class CoroutineBehavior : MonoBehaviour
         StartCoroutine(RepeatUntilFalse());
     }
 
+    public void StopRepeatUntilFalse()
+    {
+        canRun = false;
+    }
+
     private IEnumerator RepeatUntilFalse()
     {
         while(canRun)

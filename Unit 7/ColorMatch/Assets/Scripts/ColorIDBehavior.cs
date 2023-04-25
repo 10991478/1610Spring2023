@@ -6,6 +6,11 @@ public class ColorIDBehavior : IDContainerBehavior
 
     private void Awake()
     {
+        SetColorID();
+    }
+
+    public void SetColorID()
+    {
         idObj = colorIDObjList.currentColor;
     }
 }

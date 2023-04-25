@@ -15,7 +15,7 @@ public class DraggableBehavior : MonoBehaviour
     void Awake()
     {
         cameraObj = Camera.main;
-        everythingFrozen = false;
+        everythingFrozen = true;
     }
 
     public IEnumerator OnMouseDown()
@@ -43,5 +43,10 @@ public class DraggableBehavior : MonoBehaviour
             draggable = false;
             endDragEvent.Invoke();
         }
+    }
+
+    public void SetDraggable(bool canDrag)
+    {
+        everythingFrozen = !canDrag;
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 public class Instancer : ScriptableObject
 {
     public GameObject prefab;
+    public GameObject prefabChild;
     private int num = 0;
 
     public void CreateInstance()
@@ -38,5 +39,11 @@ public class Instancer : ScriptableObject
     {
         num = Random.Range(0,obj.vector3ObjList.Count);
         Instantiate(prefab, obj.vector3ObjList[num].value, Quaternion.identity);
+    }
+    public void CreateInstanceAndChildFromListRandomly(Vector3ObjList obj)
+    {
+        num = Random.Range(0,obj.vector3ObjList.Count);
+        Instantiate(prefab, obj.vector3ObjList[num].value, Quaternion.identity);
+        Instantiate(prefabChild, obj.vector3ObjList[num].value, Quaternion.identity);
     }
 }

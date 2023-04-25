@@ -6,10 +6,14 @@ using UnityEngine.Events;
 public class MatchBehavior : MonoBehaviour
 {
     public ID idObj;
-    public UnityEvent matchEvent, noMatchEvent, noMatchDelayedEvent;
+    public Vector3 defaultPosition;
+    public UnityEvent matchEvent, matchDelayedEvent, noMatchEvent, noMatchDelayedEvent;
+    private WaitForSeconds wfsObj;
+
     void Start()
     {
-        idObj = GetComponent<IDContainerBehavior>().idObj;
+        wfsObj = new WaitForSeconds(0.05f);
+        UpdateIDObj();
     }
     private IEnumerator OnTriggerEnter(Collider other)
     {
@@ -22,13 +26,25 @@ public class MatchBehavior : MonoBehaviour
         if (idObj == otherID)
         {
             matchEvent.Invoke();
+            yield return wfsObj;
+            matchDelayedEvent.Invoke();
+
         }
         else
         {
             noMatchEvent.Invoke();
-            GetComponent<DraggableBehavior>().everythingFrozen = true;
-            yield return new WaitForSeconds(0.5f);
+            yield return wfsObj;
             noMatchDelayedEvent.Invoke();
         }
+    }
+
+    public void ResetPosition()
+    {
+        gameObject.transform.position = defaultPosition;
+    }
+
+    public void UpdateIDObj()
+    {
+        idObj = GetComponent<IDContainerBehavior>().idObj;
     }
 }

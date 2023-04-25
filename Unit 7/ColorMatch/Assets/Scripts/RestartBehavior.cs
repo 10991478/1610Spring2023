@@ -7,8 +7,6 @@ public class RestartBehavior : MonoBehaviour
 
     public void RestartGame()
     {
-        gameObject.transform.position = Vector3.zero;
-        GetComponent<DraggableBehavior>().everythingFrozen = false;
         restartEvent.Invoke();
     }
 }
