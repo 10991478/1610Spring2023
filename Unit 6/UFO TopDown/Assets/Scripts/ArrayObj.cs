@@ -1,6 +1,24 @@
 using UnityEngine;
 [CreateAssetMenu]
 
+/*ArrayObj is a ScriptableObject that allows you to store an int array and a string array
+
+FUNCTION KEY:
+    setItem(int pos, int num)
+        sets the value of the item in intArray at a given index to a new value
+    setItem(int pos, string str)
+        sets the value of the item in stringArray at a given index to a new value
+    getInt(int pos)
+        gets the value of an item in intArray at a given index
+    getString(int pos)
+        gets the value of an item in stringArray at a given index
+    getIntArrayLength()
+        gets the length of intArray
+    getStringArrayLength() 
+        gets the length of stringArray
+    insert(int pos, string str, int num)
+        sets the values of the items in intArray and stringArray at a given index to a new value and pushes all other items after that index back
+*/
 public class ArrayObj : ScriptableObject
 {
     public int[] intArray;
@@ -36,7 +54,10 @@ public class ArrayObj : ScriptableObject
         return stringArray.Length;
     }
 
+
+
 /*insert() allows you to insert a string and an int into the arrays by index, pushing all values below the given index down
+
 HERES HOW IT WORKS:
     1. insert() has three parameters: an int named pos, a string named str, and an int named num
         a. pos is the index at which you'd like to insert your info

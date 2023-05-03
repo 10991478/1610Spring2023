@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+//this script updates the text displayed in the Scoreboard scene and lets you go to the main menu
 public class Scoreboard : MonoBehaviour
 {
     public int mainMenuSceneNum;

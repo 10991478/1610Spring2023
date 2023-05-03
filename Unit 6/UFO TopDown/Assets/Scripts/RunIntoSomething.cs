@@ -23,7 +23,7 @@ public class RunIntoSomething : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other){
-//if the objet is a boltpickup object, add 1 to the bolt count and destroy the pickup
+//if the objet is a boltpickup object, add 1 to the bolt count, make some text appear, and destroy the pickup
         if (other.gameObject.name == boltPickup.name + "(Clone)" || other.gameObject.name == boltPickup.name)
         {
             playerAudio.PlayOneShot(pickupSound, 0.5f);
@@ -31,7 +31,7 @@ public class RunIntoSomething : MonoBehaviour
             Instantiate(boltPickupText,transform.position,Quaternion.Euler(90,0,0));
             Destroy(other.gameObject);
         }
-//if the object is a fireRatePickup object, decrease FireRate (decreases the time between shots) and destroy the pickup
+//if the object is a fireRatePickup object, decrease FireRate (decreases the time between shots), make some text appear, and destroy the pickup
         else if (other.gameObject.name == fireRatePickup.name + "(Clone)" || other.gameObject.name == fireRatePickup.name)
         {
             playerAudio.PlayOneShot(pickupSound, 0.5f);
@@ -39,7 +39,7 @@ public class RunIntoSomething : MonoBehaviour
             Instantiate(fireRateText,transform.position,Quaternion.Euler(90,0,0));
             Destroy(other.gameObject);
         }
-//if the object is a pointPickup object, increase the score
+//if the object is a pointPickup object, increase the score, make some text appear, and destroy the pickup
         else if (other.gameObject.name == pointPickup.name + "(Clone)" || other.gameObject.name == pointPickup.name)
         {
             playerAudio.PlayOneShot(pickupSound, 0.5f);

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this script is for detecting collisions -- it is mainly used for detecting collisions between the lazers and the UFOs
 public class DetectCollision : MonoBehaviour
 {
     public bool affectsScore; //tells you whether or not to add to the score when collision is detected

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this script is for moving the player and shooting lazers
 public class PlayerController : MonoBehaviour
 {
     public float speed = 25;
@@ -44,13 +45,13 @@ public class PlayerController : MonoBehaviour
 
 
 //shoots laser & resets timeSinceLastShot
-/*CONDITIONS FOR SHOOTING:
+/*CONDITIONS FOR SHOOTING (all must be met):
     1: Spacebar is being pressed
     2: Game is not over
     3: The time since last shot is less than the fire rate*/
         if (Input.GetKey(KeyCode.Space) && gameManager.isGameOver == false && Time.time - timeSinceLastShot >= fireRate.value){
             ShootLaser();
-            timeSinceLastShot = Time.time;
+            timeSinceLastShot = Time.time; // setting timeSinceLastShot to the current time to keep track of when you can shoot next
         }
 
     }

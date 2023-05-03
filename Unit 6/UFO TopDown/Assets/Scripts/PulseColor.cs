@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this script makes an object constantly switch between two colors
 public class PulseColor : MonoBehaviour
 {
     public float speed = 1f;
@@ -9,14 +10,12 @@ public class PulseColor : MonoBehaviour
     public Color secondaryColor;
     float startTime;
 
-    // Start is called before the first frame update
     void Start()
     {
         startTime = Time.time;
     }
 
-    // Update is called once per frame
-    void Update()
+    void Update() // lerps the color of the object between two colors (mainColor and secondaryColor) at a speed that you can choose
     {
         float t = (Mathf.Sin(speed*Time.time - startTime));
         GetComponent<Renderer>().material.color = Color.Lerp(mainColor, secondaryColor, t);

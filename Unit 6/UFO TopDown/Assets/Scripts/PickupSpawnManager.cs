@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this script spawns the pickups
 public class PickupSpawnManager : MonoBehaviour
 {
     public GameObject[] pickupPrefabs; //Array to store pickups
@@ -24,7 +25,7 @@ public class PickupSpawnManager : MonoBehaviour
     }
 
     void Update(){
-        if (boltCount.value == boltCount.upperBound && !hasBoltBeenRemoved)
+        if (boltCount.value == boltCount.upperBound && !hasBoltBeenRemoved) //if the boltCount is at the max, remove its prefab from the validPickups list
         {
             for (int i = 0; i < validPickups.Count; i++){
                 if (validPickups[i].name == "BoltPickup")
@@ -35,7 +36,7 @@ public class PickupSpawnManager : MonoBehaviour
             }
             hasBoltBeenRemoved = true;
         }
-        if (fireRate.value == fireRate.lowerBound && !hasFireBeenRemoved)
+        if (fireRate.value == fireRate.lowerBound && !hasFireBeenRemoved) //if the fireRate is at the min, remove its prefab from the validPickups list
         {
             for (int i = 0; i < validPickups.Count; i++){
                 if (validPickups[i].name == "FireRatePickup")

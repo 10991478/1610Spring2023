@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//this script is for when you lose. It takes your name if your score is high enough for the scoreboard and takes you to the MainMenu
 public class GameManager : MonoBehaviour
 {
     public bool isGameOver;
@@ -77,7 +78,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    void BlinkObj(GameObject blinkingObj)
+    void BlinkObj(GameObject blinkingObj) //sets an object to inactive if it's currently active or sets active if currently inactive
     {
         blinkingObj.gameObject.SetActive(!blinkingObj.gameObject.activeInHierarchy);
     }

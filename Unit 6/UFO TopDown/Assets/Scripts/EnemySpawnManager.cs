@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this script manages the enemy spawning. It spawns enemies in at an increasing rate as the game goes on in order to make it more difficult
 public class EnemySpawnManager : MonoBehaviour
 {
     public GameObject[] ufoPrefabs; //Array to store UFO ships

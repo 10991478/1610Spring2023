@@ -1,6 +1,12 @@
 using UnityEngine;
 [CreateAssetMenu]
 
+/*This script is for making ScriptableObjects that store float values for them
+    
+FUNCTION KEY:
+    setValue(float newVal) -- sets the value of the FloatScriptableObject to newVal
+    addValue(float addVal) -- adds addVal to the FloatScriptableObject's value if it doesn't exceed any restrictions on value
+*/
 public class FloatScriptableObject : ScriptableObject
 {
     public float value;

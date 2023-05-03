@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this script destroys the object when it goes out of bounds
 public class DestroyOutOfBounds : MonoBehaviour
 {
 /*When playing the game, the z axis is the axis running up and down the screen.
